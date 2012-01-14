@@ -1,0 +1,6 @@
+#cd /home/anderson/EclipseWorkspace/financial-controller/financial-controller-ejb
+#mvn install
+cd /home/anderson/EclipseWorkspace/financial-controller/
+mvn install
+cp /home/anderson/EclipseWorkspace/financial-controller/financial-controller-ear/target/financial-controller-ear-0.0.1-SNAPSHOT.ear /usr/jboss6/jboss-6.1.0.Final/server/default/deploy
+echo 'Copiado'

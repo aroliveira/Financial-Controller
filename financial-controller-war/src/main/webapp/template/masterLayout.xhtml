@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title><ui:insert name="windowTitle"/></title>
+</h:head>
+
+<h:body>
+
+	<div id="topo">
+		<ui:insert name="topo">
+			<ui:include src="mainMenu.xhtml" />
+		</ui:insert>
+	</div>
+
+	<div id="conteudo">
+		<ui:insert name="conteudo" />
+	</div>
+</h:body>
+</html>
