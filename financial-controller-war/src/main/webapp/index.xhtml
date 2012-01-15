@@ -3,7 +3,7 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:p="http://primefaces.prime.com.tr/ui">
+	xmlns:p="http://primefaces.org/ui">
 
 <h:head></h:head>
 
@@ -14,9 +14,7 @@
 					
 			<h:form>				
 				<p>
-					Field:<h:inputText value="#{field.name}" id="nameField"/>
-					Layout:<h:inputText value="#{layout.name}" id="nameLayout"/>
-					<h:commandButton value="Loga" action="cadastro_layout" />
+					<h:commandButton value="Loga" action="cadastro_campo" />
 				</p>
 			</h:form>
 		</ui:define>

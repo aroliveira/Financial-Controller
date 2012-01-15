@@ -8,7 +8,7 @@
 
 	<context-param>
 		<param-name>javax.faces.CONFIG_FILES</param-name>
-		<param-value>/WEB-INF/navigation-config.xml</param-value>
+		<param-value>/WEB-INF/navigation-config.xml, /WEB-INF/converters-config.xml, /WEB-INF/messages-config.xml</param-value>
 	</context-param>
 
 	<servlet>

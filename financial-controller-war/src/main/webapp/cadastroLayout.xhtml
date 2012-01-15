@@ -3,7 +3,7 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:p="http://primefaces.prime.com.tr/ui">
+	xmlns:p="http://primefaces.org/ui">
 
 <h:head></h:head>
 
@@ -13,19 +13,16 @@
 		<ui:define name="conteudo">
 			<h:form id="form">
 			
-					Field:<h:inputText value="#{field.name}" id="nameField"/>
-					Layout:<h:inputText value="#{layout.name}" id="nameLayout"/>
-			
 					<p:contextMenu for="cars">  
 				        <p:menuitem value="View" update="display" icon="ui-icon-search" oncomplete="carDialog.show()"/>  
 				        <p:menuitem value="Delete" update="cars" icon="ui-icon-close" actionListener="#{tableBean.deleteCar}"/>  
 				    </p:contextMenu>  
 				  
-				    <p:dataTable id="cars" var="car" value="#{tableBean.carsSmall}" rowKey="#{car.model}"  
-				                 selection="#{tableBean.selectedCar}" selectionMode="single"  resizableColumns="true" 
+				    <p:dataTable id="cars" var="type" value="#{field.types}"  
+				                 selectionMode="single"  resizableColumns="true" 
 				                 scrollable="true" scrollHeight="150">
 				  
-				        <p:column headerText="Model">opa</p:column>
+				        <p:column headerText="Tipo">#{type}</p:column>
 				  
 				        <f:facet name="footer">  
 				            <p:commandButton value="View" icon="ui-icon-search"  

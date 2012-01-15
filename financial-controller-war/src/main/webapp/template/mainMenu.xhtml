@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:p="http://primefaces.prime.com.tr/ui">
+	xmlns:p="http://primefaces.org/ui">
 
 
 <head>
@@ -16,7 +16,8 @@
   
     <p:menubar>  
         <p:submenu label="Cadastros" icon="ui-icon-document">  
-            <p:submenu label="Importação" icon="ui-icon-contact">  
+            <p:submenu label="Importação" icon="ui-icon-contact">
+            	<p:menuitem value="Campos" action="cadastro_campo" ajax="false" />  
                 <p:menuitem value="Layout" action="cadastro_layout" ajax="false" />  
                 <p:menuitem value="Driver" url="#" helpText="CTRL+O"/>  
             </p:submenu>

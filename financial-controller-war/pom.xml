@@ -18,9 +18,6 @@
 			<artifactId>jsf-api</artifactId>
 		</dependency>
 
-		<!-- <dependency> <groupId>javax.enterprise</groupId> <artifactId>cdi-api</artifactId> 
-			</dependency> -->
-
 		<dependency>
 			<groupId>aroliveira.lab</groupId>
 			<artifactId>commons-driver</artifactId>

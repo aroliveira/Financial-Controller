@@ -27,12 +27,6 @@
 				<artifactId>commons-driver</artifactId>
 				<version>0.0.1-SNAPSHOT</version>
 			</dependency>
-			
-			<!-- <dependency>
-				<groupId>aroliveira.lab</groupId>
-				<artifactId>commons-driver-entityBean</artifactId>
-				<version>0.0.1-SNAPSHOT</version>
-			</dependency> -->
 
 			<dependency>
 				<groupId>javax.ejb</groupId>
@@ -41,10 +35,12 @@
 				<scope>provided</scope>
 			</dependency>
 
+
 			<dependency>
 				<groupId>org.primefaces</groupId>
 				<artifactId>primefaces</artifactId>
-				<version>2.2</version>
+				<!-- <version>3.0</version> -->
+				<version>3.0.M4</version>
 			</dependency>
 
 			<dependency>
@@ -61,8 +57,6 @@
 			</dependency>			
 
 			<!-- Spikes -->
-			<!-- <dependency> <groupId>jboss</groupId> <artifactId>jbossjmx-ant</artifactId> 
-				<version>3.2.3</version> </dependency> -->
 			<dependency>
 				<groupId>jboss</groupId>
 				<artifactId>jbossall-client</artifactId>
@@ -76,10 +70,6 @@
 	<build>
 		<pluginManagement>
 			<plugins>
-				<!-- <plugin> <artifactId>maven-compiler-plugin</artifactId> <configuration> 
-					<source>1.6</source> <target>1.6</target> <encoding>Cp1252</encoding> </configuration> 
-					</plugin> -->
-
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
