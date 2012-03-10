@@ -16,6 +16,13 @@
 			<artifactId>financial-controller-ejb</artifactId>
 			<type>ejb</type>
 		</dependency>
+		
+		<dependency>		
+			<groupId>aroliveira.lab</groupId>					 
+			<artifactId>financial-controller-war</artifactId>			
+			<type>war</type>
+		</dependency>		
+		
 	</dependencies>
 
 	<build>
@@ -39,6 +46,13 @@
 							<groupId>aroliveira.lab</groupId>
 							<artifactId>financial-controller-ejb</artifactId>
 						</ejbModule>
+						
+					   <!-- <webModule>
+							<groupId>aroliveira.lab</groupId>
+							<artifactId>financial-controller-war</artifactId>
+							<contextRoot>/opaFodao</contextRoot>
+						</webModule> -->						
+						
 					</modules>
 					
 				</configuration>

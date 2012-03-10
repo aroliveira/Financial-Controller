@@ -21,10 +21,23 @@
 				<artifactId>financial-controller-interface-ejb</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+			
+			<dependency>
+				<groupId>aroliveira.lab</groupId>
+				<artifactId>financial-controller-war</artifactId>
+				<version>${project.version}</version>
+				<type>war</type>
+			</dependency>
 
 			<dependency>
 				<groupId>aroliveira.lab</groupId>
 				<artifactId>commons-driver</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>aroliveira.lab</groupId>
+				<artifactId>commons-driver-entityBean</artifactId>
 				<version>0.0.1-SNAPSHOT</version>
 			</dependency>
 

@@ -15,10 +15,17 @@
 			<artifactId>financial-controller-interface-ejb</artifactId>
 		</dependency>
 
-		<!-- <dependency>
+		<!--  <dependency>
 			<groupId>jboss</groupId>
 			<artifactId>jbossall-client</artifactId>
-		</dependency> -->
+		</dependency>  -->
+
+<!--<dependency>
+        <groupId>org.jboss.jbossas</groupId>
+        <artifactId>jboss-as-client</artifactId>
+        <version>6.0.0.Final</version>
+        <type>pom</type>
+</dependency>-->
 
 	</dependencies>
 

@@ -24,7 +24,13 @@
         <dependent-module archiveName="persistence-api-1.0.2.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/javax/persistence/persistence-api/1.0.2/persistence-api-1.0.2.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="hibernate-3.0.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/hibernate/hibernate/3.0/hibernate-3.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <dependent-module archiveName="financial-controller-interface-ejb-0.0.1-SNAPSHOT.jar" deploy-path="/" handle="module:/resource/financial-controller-interface-ejb/financial-controller-interface-ejb">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="financial-controller-war-0.0.1-SNAPSHOT.war" deploy-path="/" handle="module:/resource/financial-controller-war/financial-controller-war">
             <dependency-type>uses</dependency-type>
         </dependent-module>
     </wb-module>

@@ -13,7 +13,7 @@ public class TypeConverter implements Converter {
 	@Override
 	public Object getAsObject(FacesContext context, UIComponent component,
 			String textType) {
-		
+		System.out.println("Transformando a string: '" + textType + "' em obj'");
 		return Type.valueOf(textType);
 	}
 
@@ -21,6 +21,8 @@ public class TypeConverter implements Converter {
 	public String getAsString(FacesContext context, UIComponent component,
 			Object type) {
 		
-		return type.toString();
+		System.out.println("Transformando obj em string: " + type.toString());
+		
+		return "Tipo: " + type.toString();
 	}
 }

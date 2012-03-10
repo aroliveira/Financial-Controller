@@ -24,6 +24,11 @@
 		</dependency>
 
 		<dependency>
+			<groupId>aroliveira.lab</groupId>
+			<artifactId>financial-controller-interface-ejb</artifactId>
+		</dependency>
+
+		<dependency>
 			<groupId>org.primefaces</groupId>
 			<artifactId>primefaces</artifactId>
 		</dependency>

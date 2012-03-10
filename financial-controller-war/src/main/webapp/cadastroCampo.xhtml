@@ -18,17 +18,11 @@
 				 <h:panelGrid columns="2">
 				 
 				 	<h:outputText value="#{msg_importacao.labelNome}" />
-				 	<h:inputText value="#{field.name}" id="nameField"/>
-
-			        <h:outputText value="#{msg_importacao.labelTipo}" />
-					<h:selectOneMenu value="#{field.type}" effect="fade" >
-			            <f:selectItem itemLabel="#{msg_importacao.labelSelecaoDoTipo}" itemValue="" />
-			            <f:selectItems value="#{field.types}" var="type" itemLabel="#{type}" itemValue="#{type}"/>
-			        </h:selectOneMenu>
+				 	<h:inputText value="#{fieldBean.name}" id="nameField"/>
 			        
 				 </h:panelGrid>
 				 
-				<h:commandButton value="Loga" action="cadastro_layout" />
+				<h:commandButton value="Loga" action="#{fieldBean.newField}" />
 						  
 			</h:form>
 		</ui:define>

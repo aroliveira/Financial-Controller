@@ -6,6 +6,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
+import aroliveira.lab.fileManager.FieldBean;
 import aroliveira.lab.fileManager.LoadFile;
 import aroliveira.lab.time.TimedBean;
 
@@ -26,7 +27,21 @@ public class TestEJB {
 		Context context = new InitialContext(props);
 		
 		//fileBeanTest(context);
-		timerBeanTest(context);
+		//timerBeanTest(context);
+		fieldBeanTest(context);
+	}
+
+	private static void fieldBeanTest(Context context) throws NamingException {
+		System.out.println("bind");
+
+		String ejbName = "financial-controller-ear-0.0.1-SNAPSHOT/FieldBeanImpl/remote";
+		
+		
+		System.out.println("opaaaa" + context.lookup(ejbName));
+		
+		FieldBean x = (FieldBean) context.lookup(ejbName);
+		
+		System.out.println("opaaaa khkjhkjh: " + x);		
 	}
 
 	private static void timerBeanTest(Context context) throws NamingException {

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+
+<body>
+
+	<ui:composition template="template/masterLayout.xhtml">
+		<ui:define name="conteudo">
+			<h:form id="form">
+				<h:outputLabel value="HEHEHEHEHE(alterado):" />
+				<h:inputText value="#{fieldManagedBean.currentField.name}" />
+				
+		        <h:outputText value="Tipo: " />
+		        
+		        <p:selectOneMenu value="#{fieldManagedBean.currentField.type}" effect="fold">
+		            <f:selectItem itemLabel="Select One" itemValue="" />
+		            <f:selectItems value="#{fieldManagedBean.avaliableTypes()}" />
+		        </p:selectOneMenu>
+				
+				<h3>Disc</h3>  
+				<p:dataList value="#{fieldManagedBean.currentField.type}" var="type" itemType="disc">  
+				    #{type}
+				</p:dataList>				
+				
+				<h:commandButton action="#{fieldManagedBean.createNewField()}" value="Save" />
+			</h:form>
+
+		</ui:define>
+	</ui:composition>
+</body>
+</html>

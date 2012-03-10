@@ -1,9 +1,11 @@
 package aroliveira.lab.fileManager;
 
+import aroliveira.lab.structure.entities.layout.Field;
+import aroliveira.lab.structure.util.Type;
+
 public interface FieldBean {
 	
-	void createField(String fieldName, String fieldType);
-	void updateField(String fieldName, String fieldType);
-	void deleteField(String fieldName);
-	void listAll();
+	Field createField(String fieldName, Type type);
+	
+	Type[] avaliableTypes();
 }

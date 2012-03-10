@@ -8,7 +8,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
 import aroliveira.lab.fileManager.LoadFile;
-import aroliveira.lab.structure.layout.Field;
+import aroliveira.lab.structure.entities.layout.Field;
 import aroliveira.lab.structure.util.Type;
 
 @Stateless
@@ -31,17 +31,17 @@ public class LoadFileBean implements LoadFile{
 			
 			System.out.println("LoadFileBean.doSomeThing() 1");
 			
-			Query query = manager.createQuery("FROM Field f");
+			//Query query = manager.createQuery("FROM Field f");
 			
 			System.out.println("LoadFileBean.doSomeThing() 2");
 			
-			System.out.println("Antes de salvar: " + query.getSingleResult());
+			//System.out.println("Antes de salvar: " + query.getSingleResult());
 			
 			System.out.println("LoadFileBean.doSomeThing() 3");
 			
-			manager.persist(new Field(nomeDoField, Type.DATE));
+			//manager.persist(new Field(nomeDoField, Type.DATE));
 			
-			System.out.println("\n\n\n\n\n\nDepois de salvar: " + query.getSingleResult());
+			//System.out.println("\n\n\n\n\n\nDepois de salvar: " + query.getSingleResult());
 			return "Sucess";
 		}catch (Exception e) {
 			System.out.println("\n\n\n\n\n\n\n\nFODEU\n\n");

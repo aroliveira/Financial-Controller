@@ -21,7 +21,6 @@
 			<groupId>aroliveira.lab</groupId>
 			<artifactId>financial-controller-interface-ejb</artifactId>
 		</dependency>
-
 	</dependencies>
 
 	<build>
