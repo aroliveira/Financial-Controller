@@ -3,11 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>aroliveira.lab</groupId>
 	<artifactId>financial-controller</artifactId>
-<<<<<<< HEAD
-	<version>0.0.1</version>
-=======
-	<version>0.0.1-SNAPSHOT</version>
->>>>>>> fb38caf897f2435fce1f7987ff1e9843a9d1c1bf
+	<version>0.0.2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<dependencyManagement>
@@ -28,7 +24,6 @@
 
 			<dependency>
 				<groupId>aroliveira.lab</groupId>
-<<<<<<< HEAD
 				<artifactId>financial-controller-war</artifactId>
 				<version>${project.version}</version>
 				<type>war</type>
@@ -45,11 +40,6 @@
 				<artifactId>commons-driver-entityBean</artifactId>
 				<version>0.0.1-SNAPSHOT</version>
 			</dependency> -->
-=======
-				<artifactId>commons-driver</artifactId>
-				<version>0.0.1-SNAPSHOT</version>
-			</dependency>
->>>>>>> fb38caf897f2435fce1f7987ff1e9843a9d1c1bf
 
 			<dependency>
 				<groupId>javax.ejb</groupId>
@@ -58,7 +48,6 @@
 				<scope>provided</scope>
 			</dependency>
 
-<<<<<<< HEAD
 
 			<dependency>
 				<groupId>org.primefaces</groupId>
@@ -100,14 +89,6 @@
 			<!-- end testes -->
 
 			<!-- Spikes -->
-=======
-			<!-- Spikes -->
-			<!-- <dependency>
-				<groupId>jboss</groupId>
-				<artifactId>jbossjmx-ant</artifactId>
-				<version>3.2.3</version>
-			</dependency> -->
->>>>>>> fb38caf897f2435fce1f7987ff1e9843a9d1c1bf
 			<dependency>
 				<groupId>jboss</groupId>
 				<artifactId>jbossall-client</artifactId>
@@ -122,13 +103,9 @@
 		<pluginManagement>
 			<plugins>
 				<plugin>
-<<<<<<< HEAD
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>2.0.2</version>
-=======
-					<artifactId>maven-compiler-plugin</artifactId>
->>>>>>> fb38caf897f2435fce1f7987ff1e9843a9d1c1bf
 					<configuration>
 						<source>1.6</source>
 						<target>1.6</target>
@@ -139,7 +116,6 @@
 		</pluginManagement>
 	</build>
 
-<<<<<<< HEAD
 	<repositories>
 		<repository>
 			<id>prime-repo</id>
@@ -149,27 +125,19 @@
 		</repository>
 	</repositories>
 
-=======
->>>>>>> fb38caf897f2435fce1f7987ff1e9843a9d1c1bf
 	<modules>
 		<module>financial-controller-ejb</module>
 		<module>financial-controller-ear</module>
 		<module>financial-controller-interface-ejb</module>
 		<module>financial-controller-spikes</module>
-<<<<<<< HEAD
 		<module>financial-controller-war</module>
 	</modules>
 
 	<properties>
 		<version.arquillian_core>1.0.0.CR7</version.arquillian_core>
 		<version.arquillian_container>7.1.0.Final</version.arquillian_container>
-		<commons.driver.version>0.0.1</commons.driver.version>		
+		<commons.driver.version>0.0.1</commons.driver.version>
 	</properties>
 
 </project>
 
-=======
-	</modules>
-
-</project>
->>>>>>> fb38caf897f2435fce1f7987ff1e9843a9d1c1bf

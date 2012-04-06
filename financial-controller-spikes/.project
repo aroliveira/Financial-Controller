@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>financial-controller-spikes</name>
-	<comment></comment>
+	<comment>NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
 	<projects>
+		<project>financial-controller-interface-ejb</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
@@ -11,25 +12,13 @@
 			</arguments>
 		</buildCommand>
 		<buildCommand>
-<<<<<<< HEAD
-			<name>org.hibernate.eclipse.console.hibernateBuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
-=======
->>>>>>> fb38caf897f2435fce1f7987ff1e9843a9d1c1bf
 			<name>org.eclipse.m2e.core.maven2Builder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
 	</buildSpec>
 	<natures>
-		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
-<<<<<<< HEAD
-		<nature>org.hibernate.eclipse.console.hibernateNature</nature>
-=======
->>>>>>> fb38caf897f2435fce1f7987ff1e9843a9d1c1bf
+		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
 </projectDescription>

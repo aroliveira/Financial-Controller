@@ -5,16 +5,9 @@ import javax.ejb.Remote;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-<<<<<<< HEAD
 
 import aroliveira.lab.fileManager.LoadFile;
-=======
-import javax.persistence.Query;
 
-import aroliveira.lab.fileManager.LoadFile;
-import aroliveira.lab.structure.layout.Field;
-import aroliveira.lab.structure.util.Type;
->>>>>>> fb38caf897f2435fce1f7987ff1e9843a9d1c1bf
 
 @Stateless
 @Remote
@@ -36,7 +29,6 @@ public class LoadFileBean implements LoadFile{
 			
 			System.out.println("LoadFileBean.doSomeThing() 1");
 			
-<<<<<<< HEAD
 			//Query query = manager.createQuery("FROM Field f");
 			
 			System.out.println("LoadFileBean.doSomeThing() 2");
@@ -48,19 +40,6 @@ public class LoadFileBean implements LoadFile{
 			//manager.persist(new Field(nomeDoField, Type.DATE));
 			
 			//System.out.println("\n\n\n\n\n\nDepois de salvar: " + query.getSingleResult());
-=======
-			Query query = manager.createQuery("FROM Field f");
-			
-			System.out.println("LoadFileBean.doSomeThing() 2");
-			
-			System.out.println("Antes de salvar: " + query.getSingleResult());
-			
-			System.out.println("LoadFileBean.doSomeThing() 3");
-			
-			manager.persist(new Field(nomeDoField, Type.DATE));
-			
-			System.out.println("\n\n\n\n\n\nDepois de salvar: " + query.getSingleResult());
->>>>>>> fb38caf897f2435fce1f7987ff1e9843a9d1c1bf
 			return "Sucess";
 		}catch (Exception e) {
 			System.out.println("\n\n\n\n\n\n\n\nFODEU\n\n");
