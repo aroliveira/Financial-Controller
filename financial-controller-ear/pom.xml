@@ -4,7 +4,11 @@
 	<parent>
 		<artifactId>financial-controller</artifactId>
 		<groupId>aroliveira.lab</groupId>
+<<<<<<< HEAD
 		<version>0.0.1</version>
+=======
+		<version>0.0.1-SNAPSHOT</version>
+>>>>>>> fb38caf897f2435fce1f7987ff1e9843a9d1c1bf
 		<relativePath>..</relativePath>
 	</parent>
 	<artifactId>financial-controller-ear</artifactId>
@@ -16,6 +20,7 @@
 			<artifactId>financial-controller-ejb</artifactId>
 			<type>ejb</type>
 		</dependency>
+<<<<<<< HEAD
 		
 		<dependency>		
 			<groupId>aroliveira.lab</groupId>					 
@@ -23,6 +28,8 @@
 			<type>war</type>
 		</dependency>		
 		
+=======
+>>>>>>> fb38caf897f2435fce1f7987ff1e9843a9d1c1bf
 	</dependencies>
 
 	<build>
@@ -46,6 +53,7 @@
 							<groupId>aroliveira.lab</groupId>
 							<artifactId>financial-controller-ejb</artifactId>
 						</ejbModule>
+<<<<<<< HEAD
 						
 					   <!-- <webModule>
 							<groupId>aroliveira.lab</groupId>
@@ -53,6 +61,8 @@
 							<contextRoot>/opaFodao</contextRoot>
 						</webModule> -->						
 						
+=======
+>>>>>>> fb38caf897f2435fce1f7987ff1e9843a9d1c1bf
 					</modules>
 					
 				</configuration>
@@ -61,4 +71,8 @@
 	</build>
 
 
+<<<<<<< HEAD
 </project>
+=======
+</project>
+>>>>>>> fb38caf897f2435fce1f7987ff1e9843a9d1c1bf

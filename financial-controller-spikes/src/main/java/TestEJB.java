@@ -3,9 +3,15 @@ import java.util.GregorianCalendar;
 import java.util.Properties;
 
 import javax.naming.Context;
+<<<<<<< HEAD
 import javax.naming.NamingException;
 
 import aroliveira.lab.fileManager.FieldBean;
+=======
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+>>>>>>> fb38caf897f2435fce1f7987ff1e9843a9d1c1bf
 import aroliveira.lab.fileManager.LoadFile;
 import aroliveira.lab.time.TimedBean;
 
@@ -23,6 +29,7 @@ public class TestEJB {
 		props.put(Context.URL_PKG_PREFIXES, "org.jboss.naming:org.jnp.interfaces");
 		
 		System.out.println("criando o ctx");
+<<<<<<< HEAD
 		
 		System.out.println(TesteEnumm.valueOf("JANEIRO"));
 		
@@ -45,6 +52,12 @@ public class TestEJB {
 		FieldBean x = (FieldBean) context.lookup(ejbName);
 		
 		System.out.println("opaaaa khkjhkjh: " + x);		
+=======
+		Context context = new InitialContext(props);
+		
+		//fileBeanTest(context);
+		timerBeanTest(context);
+>>>>>>> fb38caf897f2435fce1f7987ff1e9843a9d1c1bf
 	}
 
 	private static void timerBeanTest(Context context) throws NamingException {

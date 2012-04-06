@@ -4,7 +4,11 @@
 	<parent>
 		<artifactId>financial-controller</artifactId>
 		<groupId>aroliveira.lab</groupId>
+<<<<<<< HEAD
 		<version>0.0.1</version>
+=======
+		<version>0.0.1-SNAPSHOT</version>
+>>>>>>> fb38caf897f2435fce1f7987ff1e9843a9d1c1bf
 		<relativePath>..</relativePath>
 	</parent>
 	<artifactId>financial-controller-spikes</artifactId>
@@ -15,6 +19,7 @@
 			<artifactId>financial-controller-interface-ejb</artifactId>
 		</dependency>
 
+<<<<<<< HEAD
 		<!--  <dependency>
 			<groupId>jboss</groupId>
 			<artifactId>jbossall-client</artifactId>
@@ -30,3 +35,13 @@
 	</dependencies>
 
 </project>
+=======
+		<!-- <dependency>
+			<groupId>jboss</groupId>
+			<artifactId>jbossall-client</artifactId>
+		</dependency> -->
+
+	</dependencies>
+
+</project>
+>>>>>>> fb38caf897f2435fce1f7987ff1e9843a9d1c1bf

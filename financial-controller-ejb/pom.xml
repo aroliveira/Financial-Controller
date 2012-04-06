@@ -4,7 +4,11 @@
 	<parent>
 		<artifactId>financial-controller</artifactId>
 		<groupId>aroliveira.lab</groupId>
+<<<<<<< HEAD
 		<version>0.0.1</version>
+=======
+		<version>0.0.1-SNAPSHOT</version>
+>>>>>>> fb38caf897f2435fce1f7987ff1e9843a9d1c1bf
 		<relativePath>..</relativePath>
 	</parent>
 
@@ -22,6 +26,7 @@
 			<artifactId>financial-controller-interface-ejb</artifactId>
 		</dependency>
 
+<<<<<<< HEAD
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -34,6 +39,8 @@
 			<scope>provided</scope>
 		</dependency>
 
+=======
+>>>>>>> fb38caf897f2435fce1f7987ff1e9843a9d1c1bf
 	</dependencies>
 
 	<build>
@@ -53,6 +60,7 @@
 		</plugins>
 	</build>
 
+<<<<<<< HEAD
 	<profiles>
 		<profile>
 			<id>jbossas-7</id>
@@ -94,4 +102,6 @@
 		</repository>
 	</repositories>
 
+=======
+>>>>>>> fb38caf897f2435fce1f7987ff1e9843a9d1c1bf
 </project>

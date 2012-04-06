@@ -3,6 +3,7 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
 	version="2.0">
 
+<<<<<<< HEAD
 	<persistence-unit name="DefaultDS" transaction-type="JTA">
 		<jta-data-source>java:jboss/datasources/FinancialDS</jta-data-source>
 		<class>aroliveira.lab.structure.entities.layout.Field</class>
@@ -12,6 +13,15 @@
 		<properties>
 			<property name="hibernate.hbm2ddl.auto" value="update" />
 			<property name="hibernate.show_sql" value="true" />		
+=======
+	<persistence-unit name="DefaultDS">
+		<jta-data-source>java:/FinancialDS</jta-data-source>
+		<class>aroliveira.lab.structure.layout.Field</class>
+		<class>aroliveira.lab.structure.base.EntityBean</class>
+		<properties>
+			<!-- <property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="true" /> -->		
+>>>>>>> fb38caf897f2435fce1f7987ff1e9843a9d1c1bf
 			<!-- <property name="hibernate.connection.url" value="jdbc:h2:@@target.dir@@/testdb" />
 			<property name="hibernate.connection.driver_class" value="org.h2.Driver" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
