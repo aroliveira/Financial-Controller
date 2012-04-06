@@ -5,11 +5,8 @@ import javax.ejb.Remote;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
 
 import aroliveira.lab.fileManager.LoadFile;
-import aroliveira.lab.structure.entities.layout.Field;
-import aroliveira.lab.structure.util.Type;
 
 @Stateless
 @Remote

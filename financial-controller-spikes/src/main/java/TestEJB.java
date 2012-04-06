@@ -3,7 +3,6 @@ import java.util.GregorianCalendar;
 import java.util.Properties;
 
 import javax.naming.Context;
-import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
 import aroliveira.lab.fileManager.FieldBean;
@@ -24,11 +23,15 @@ public class TestEJB {
 		props.put(Context.URL_PKG_PREFIXES, "org.jboss.naming:org.jnp.interfaces");
 		
 		System.out.println("criando o ctx");
-		Context context = new InitialContext(props);
+		
+		System.out.println(TesteEnumm.valueOf("JANEIRO"));
+		
+		
+		//Context context = new InitialContext(props);
 		
 		//fileBeanTest(context);
 		//timerBeanTest(context);
-		fieldBeanTest(context);
+		//fieldBeanTest(context);
 	}
 
 	private static void fieldBeanTest(Context context) throws NamingException {

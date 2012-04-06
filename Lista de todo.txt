@@ -1,0 +1,20 @@
+1 ) Permitir o cadastro de lancamentos
+
+	1.1 ) O que é preciso para realizar o cadastro de um lancamento?
+	
+		Descrição
+		Valor
+		Data da Compra
+		
+2 ) Permitir a alteração do valor e descrição de um lançamento
+
+	2.1 ) Selecionar um lançamento e edita-lo e garantir que seus dados foram atualizados na base de dados.
+	
+3 ) Permitir excluir um lançamento
+
+	3.1 ) Selecionar um lançamento e apaga-lo
+
+4 ) Automatizar a operação de cadastro de lançamentos
+
+	4.1 ) Implementar uma rotina que dado um arquivo configurado consiga importar e criar os lançamentos correspondentes
+

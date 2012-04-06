@@ -8,35 +8,52 @@
 <h:head></h:head>
 
 <body>
-	<ui:composition template="template/masterLayout.xhtml">	
-		
-		<ui:define name="conteudo">
-			<h:form id="form">
+
+	<ui:composition template="template/masterLayout.xhtml">
 			
-				<h1>UEPA</h1>
+		<ui:define name="conteudo">
+		
+			<h:form id="form">
+
+				<h:outputLabel value="Campo: (A treta esta aqui, ainda não sei pq)" />
+				<h:selectOneMenu value="#{layoutFieldManagedBean.currentLayoutField.field}"
+					effect="fold">
+					<f:selectItems value="#{fieldManagedBean.fields()}" />
+				</h:selectOneMenu>
+
+				<h:outputText value="Campo pode ser nulo:" />
+				<p:selectOneRadio id="nullable" value="#{layoutFieldManagedBean.currentLayoutField.nullable}">
+					<f:selectItem itemLabel="Sim" itemValue="#{true}" />
+					<f:selectItem itemLabel="Não" itemValue="#{false}" />
+				</p:selectOneRadio>
+
+				<h:outputText value="Posição Inicial: " />
+				<h:inputText value="#{layoutFieldManagedBean.currentLayoutField.initialPosition}" />
 				
-					<!-- <p:contextMenu for="cars">  
-				        <p:menuitem value="View" update="display" icon="ui-icon-search" oncomplete="carDialog.show()"/>  
-				        <p:menuitem value="Delete" update="cars" icon="ui-icon-close" actionListener="#{tableBean.deleteCar}"/>  
-				    </p:contextMenu>  
-				  
-				    <p:dataTable id="cars" var="type" value="#{field.types}"  
-				                 selectionMode="single"  resizableColumns="true" 
-				                 scrollable="true" scrollHeight="150">
-				  
-				        <p:column headerText="Tipo">#{type}</p:column>
-				  
-				        <f:facet name="footer">  
-				            <p:commandButton value="View" icon="ui-icon-search"  
-				                    update="form:display" oncomplete="carDialog.show()"/>  
-				        </f:facet>
-				    </p:dataTable>
-				  
-				    <p:dialog header="Car Detail" widgetVar="carDialog" resizable="false"  
-				              width="200" showEffect="clip" hideEffect="fold">
-				    	<h:outputText value="Model:" />  
-				    </p:dialog>		 -->	  
+				<h:outputText value="Tamanho: " />
+				<h:inputText value="#{layoutFieldManagedBean.currentLayoutField.size}" />
+					
+				<p:commandButton value="Save"
+					action="#{layoutFieldManagedBean.createNewLayoutField}" 
+					update=":listForm"/>					
+					
 			</h:form>
+			
+			<h:form id="listForm">
+			
+				<h:dataTable id="layoutFieldsTable" var="layoutField"
+					value="#{layoutFieldManagedBean.layoutFields()}" 
+					selection="#{layoutFieldManagedBean.currentLayoutField}" selectionMode="single"
+					rowKey="#{layoutField.initialPosition}">
+					
+					<f:facet name="header">Campos cadastrados para o Layout</f:facet>
+					<p:column headerText="Campo">#{layoutField.field()}</p:column>
+					<p:column headerText="Pode ser nulo">#{layoutField.nullable}</p:column>
+					<p:column headerText="Posição inicial">#{layoutField.initialPosition}</p:column>
+					<p:column headerText="Tamanho">#{layoutField.size}</p:column>
+				</h:dataTable>				
+			</h:form>			
+			
 		</ui:define>
 	</ui:composition>
 </body>

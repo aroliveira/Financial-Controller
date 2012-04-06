@@ -7,24 +7,36 @@
 
 <h:head></h:head>
 
-<body>	
-
+<body>
 	<ui:composition template="template/masterLayout.xhtml">
-		
 		<ui:define name="conteudo">
-			
 			<h:form id="form">
-			
-				 <h:panelGrid columns="2">
-				 
-				 	<h:outputText value="#{msg_importacao.labelNome}" />
-				 	<h:inputText value="#{fieldBean.name}" id="nameField"/>
-			        
-				 </h:panelGrid>
-				 
-				<h:commandButton value="Loga" action="#{fieldBean.newField}" />
-						  
+				<h:outputLabel value="Nome do Campo:" />
+				<h:inputText value="#{fieldManagedBean.currentField.name}" />
+
+				<h:outputText value="Tipo: " />
+				<h:selectOneMenu value="#{fieldManagedBean.currentField.type}"
+					effect="fold">
+					<f:selectItems value="#{fieldManagedBean.avaliableTypes()}" />
+				</h:selectOneMenu>
+
+				<p:commandButton value="Save"
+					action="#{fieldManagedBean.createNewField}" 
+					update=":listForm"/>
 			</h:form>
+
+			<h:form id="listForm">
+			
+				<h:dataTable id="fieldsTable" var="field"
+					value="#{fieldManagedBean.fields()}" rowKey="#{field.name}"
+					selection="#{fieldManagedBean.currentField}" selectionMode="single">
+					<f:facet name="header">Campos cadastrados</f:facet>
+					<p:column headerText="Nome">#{field.name}</p:column>
+					<p:column headerText="Tipo">#{field.type}</p:column>
+				</h:dataTable>
+				
+			</h:form>
+
 		</ui:define>
 	</ui:composition>
 </body>

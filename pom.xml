@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>aroliveira.lab</groupId>
 	<artifactId>financial-controller</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<packaging>pom</packaging>
 
 	<dependencyManagement>
@@ -21,7 +21,7 @@
 				<artifactId>financial-controller-interface-ejb</artifactId>
 				<version>${project.version}</version>
 			</dependency>
-			
+
 			<dependency>
 				<groupId>aroliveira.lab</groupId>
 				<artifactId>financial-controller-war</artifactId>
@@ -32,14 +32,14 @@
 			<dependency>
 				<groupId>aroliveira.lab</groupId>
 				<artifactId>commons-driver</artifactId>
-				<version>0.0.1-SNAPSHOT</version>
+				<version>${commons.driver.version}</version>
 			</dependency>
 
-			<dependency>
+			<!-- <dependency>
 				<groupId>aroliveira.lab</groupId>
 				<artifactId>commons-driver-entityBean</artifactId>
 				<version>0.0.1-SNAPSHOT</version>
-			</dependency>
+			</dependency> -->
 
 			<dependency>
 				<groupId>javax.ejb</groupId>
@@ -53,21 +53,40 @@
 				<groupId>org.primefaces</groupId>
 				<artifactId>primefaces</artifactId>
 				<!-- <version>3.0</version> -->
-				<version>3.0.M4</version>
+				<!-- <version>3.0.M4</version> -->
+				<version>3.2</version>
 			</dependency>
 
 			<dependency>
 				<groupId>javax.enterprise</groupId>
 				<artifactId>cdi-api</artifactId>
-				<version>1.0-SP1</version>						
+				<version>1.0-SP1</version>
 			</dependency>
-			
+
 			<dependency>
 				<groupId>com.sun.faces</groupId>
 				<artifactId>jsf-api</artifactId>
 				<version>2.1.2</version>
 				<type>jar</type>
-			</dependency>			
+			</dependency>
+
+			<!-- Testes -->
+
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.8.2</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.jboss.arquillian.junit</groupId>
+				<artifactId>arquillian-junit-container</artifactId>
+				<version>${arquillian.version}</version>
+				<scope>test</scope>
+			</dependency>
+			
+			<!-- end testes -->
 
 			<!-- Spikes -->
 			<dependency>
@@ -114,4 +133,11 @@
 		<module>financial-controller-war</module>
 	</modules>
 
+	<properties>
+		<version.arquillian_core>1.0.0.CR7</version.arquillian_core>
+		<version.arquillian_container>7.1.0.Final</version.arquillian_container>
+		<commons.driver.version>0.0.1</commons.driver.version>		
+	</properties>
+
 </project>
+

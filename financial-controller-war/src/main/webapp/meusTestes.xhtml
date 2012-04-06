@@ -8,28 +8,19 @@
 <h:head></h:head>
 
 <body>
-
 	<ui:composition template="template/masterLayout.xhtml">
 		<ui:define name="conteudo">
 			<h:form id="form">
-				<h:outputLabel value="HEHEHEHEHE(alterado):" />
+				<h:outputLabel value="Nome do Campo():" />
 				<h:inputText value="#{fieldManagedBean.currentField.name}" />
 				
 		        <h:outputText value="Tipo: " />
-		        
-		        <p:selectOneMenu value="#{fieldManagedBean.currentField.type}" effect="fold">
-		            <f:selectItem itemLabel="Select One" itemValue="" />
+		        <h:selectOneMenu value="#{fieldManagedBean.currentField.type}" effect="fold">
 		            <f:selectItems value="#{fieldManagedBean.avaliableTypes()}" />
-		        </p:selectOneMenu>
+		        </h:selectOneMenu>
 				
-				<h3>Disc</h3>  
-				<p:dataList value="#{fieldManagedBean.currentField.type}" var="type" itemType="disc">  
-				    #{type}
-				</p:dataList>				
-				
-				<h:commandButton action="#{fieldManagedBean.createNewField()}" value="Save" />
+				<p:commandButton action="#{fieldManagedBean.createNewField}" value="Save"/>
 			</h:form>
-
 		</ui:define>
 	</ui:composition>
 </body>

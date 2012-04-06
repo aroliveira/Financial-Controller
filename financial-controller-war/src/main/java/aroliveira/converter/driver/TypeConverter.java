@@ -23,6 +23,6 @@ public class TypeConverter implements Converter {
 		
 		System.out.println("Transformando obj em string: " + type.toString());
 		
-		return "Tipo: " + type.toString();
+		return type.toString();
 	}
 }

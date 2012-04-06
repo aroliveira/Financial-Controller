@@ -6,7 +6,9 @@
 	<persistence-unit name="DefaultDS" transaction-type="JTA">
 		<jta-data-source>java:jboss/datasources/FinancialDS</jta-data-source>
 		<class>aroliveira.lab.structure.entities.layout.Field</class>
+		<class>aroliveira.lab.structure.entities.layout.LayoutField</class>
 		<class>aroliveira.lab.structure.entities.base.EntityBean</class>
+		<class>aroliveira.lab.business.statement.Statement</class>
 		<properties>
 			<property name="hibernate.hbm2ddl.auto" value="update" />
 			<property name="hibernate.show_sql" value="true" />		

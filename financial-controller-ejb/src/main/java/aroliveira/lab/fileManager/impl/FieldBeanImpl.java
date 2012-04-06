@@ -1,5 +1,7 @@
 package aroliveira.lab.fileManager.impl;
 
+import java.util.List;
+
 import javax.ejb.Remote;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -18,18 +20,18 @@ public class FieldBeanImpl implements FieldBean {
 
 	@Override
 	public Field createField(String fieldName, Type type) {
-		System.out.println("Opa, criando um novo field no ejb. Manager: --> " + manager);
 		Field f = new Field(fieldName, type);
-		System.out.println("Opa, CRIADO um novo field no ejb");
-		System.out.println("Antes de salvar");
 		manager.persist(f);
-		System.out.println("Depois de salvar");
 		return f; 
 	}
 
 	@Override
 	public Type[] avaliableTypes() {
-		System.out.println("No ejb: " + Type.values());
 		return Type.values();
+	}
+
+	@Override
+	public List fields() {
+		return manager.createNamedQuery("FieldEntity.findAll").getResultList();
 	}
 }

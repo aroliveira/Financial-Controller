@@ -1,5 +1,7 @@
 package aroliveira.managed.beans;
 
+import java.util.List;
+
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -26,11 +28,14 @@ public class FieldManagedBean {
 	}
 
 	public Type[] avaliableTypes(){
-		System.out.println("Opa no bean perguntando quais são os tipos válidos: " + fieldBeanService.avaliableTypes());
 		return fieldBeanService.avaliableTypes();
 	}
 
 	public void createNewField(){
-		fieldBeanService.createField(currentField.getName(), Type.INTEGER);
+		fieldBeanService.createField(currentField.getName(), currentField.getType());
+	}
+	
+	public List<Field> fields(){
+		return fieldBeanService.fields();
 	}
 }
