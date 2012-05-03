@@ -14,7 +14,56 @@
 
 	3.1 ) Selecionar um lançamento e apaga-lo
 
-4 ) Automatizar a operação de cadastro de lançamentos
+4 ) Categorizar um lançamento
 
-	4.1 ) Implementar uma rotina que dado um arquivo configurado consiga importar e criar os lançamentos correspondentes
+	4.1 - Permitir a categorização manual. 
+		
+		5.1.1 Para categorização manual é preciso validar que o label em questão é válido para o lançamento	
+	
+	4.2 - Permitir que o rotulamento do lançamento ocorra partir de sua descrição
+	
+	4.3 - Permitir que uma descrição possibilite o uso de 2 labels
 
+	Cenários StatementLabelStatementTest
+	
+		- Garantir que ao criar um statement o label é setado
+		- Garantir que está sendo setado mais de um label em um lancamento
+		- Recuperar todos os lançamentos de um label específico
+		- Recuperar todos os lançamentos de um label pai
+		- Remover um label de um lançamento
+		- Adicionar manulmente um label a um lançamento já existente
+		
+		- Garantir qua ao criar ou editar o patter de um label, todos os lançamentos validos com o pattern devem ser atualizados (Select com like) (brincar com variações do pattern)
+		- Ao excluir um label deve-se ser desassociados todos os lancamentos que apontam para o label em questão
+		- O que deve acontecer no cenário onde temos um label filho e pai com pattern diferentes cadastrados? Penso que isso deve ser permitido, pois suponhamos o caso:
+			Pai: "Alimentação"
+				Filho: "Pamonha"
+				Filho: "Ki Sabor"
+			Lançamento 1: "Ki Sabor, 12,45"
+			Lançamento 1: "Milao (Alimentacao), 22,67"
+			
+			Ambos os lançamentos devem estar rotulados como Alimentação, no entanto, só o lancto 1 é que tbm receberá o label "Ki Sabor"		
+		- Um label que não tenha pattern cadastrado, e sem filho, só poderá ser utilizado manualmente, ele não será associado a nenhum lançamento no momento da sua criação.
+		- Um label que não tenha pattern cadastrado só poderá ser utilizado automaticamente se possuir filho
+		- Garantir a escolha happy day de um label dado uma descrição
+		- Garantir a escolha de mais de um label dado uma descrição		
+
+		- Implementar cenário arquillian que garanta a unicidade do label
+
+
+StatementLabel (n) -> (1) StatementLabelStatement
+	Descricao: String
+	Pai: StatementLabel
+	Pattern: String
+
+StatementLabelStatement
+	StatementLabel
+	Statement
+	
+Statement (n) -> (1) StatementLabelStatement
+
+	Ao criar um statement devo descobrir quais são os labels que são válidos de acordo com a descrição do lançamento (StatementLabelHome)
+
+5 ) Automatizar a operação de cadastro de lançamentos
+
+	5.1 ) Implementar uma rotina que dado um arquivo configurado consiga importar e criar os lançamentos correspondentes

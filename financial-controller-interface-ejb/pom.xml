@@ -4,7 +4,7 @@
 	<parent>
 		<artifactId>financial-controller</artifactId>
 		<groupId>aroliveira.lab</groupId>
-		<version>0.0.1</version>
+		<version>0.0.2</version>
 		<relativePath>..</relativePath>
 	</parent>
 	<artifactId>financial-controller-interface-ejb</artifactId>
