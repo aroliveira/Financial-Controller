@@ -28,7 +28,6 @@ public class LayoutFieldManagedBean {
 	
 	public LayoutField createNewLayoutField(){
 		
-		System.out.println("Antes de criar o LayoutField no bean");
 		
 		return layoutFieldBeanService.createLayoutField(null, 
 				true, 
