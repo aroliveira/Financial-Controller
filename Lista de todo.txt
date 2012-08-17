@@ -67,3 +67,7 @@ Statement (n) -> (1) StatementLabelStatement
 5 ) Automatizar a operação de cadastro de lançamentos
 
 	5.1 ) Implementar uma rotina que dado um arquivo configurado consiga importar e criar os lançamentos correspondentes
+
+
+
+teste de commit
